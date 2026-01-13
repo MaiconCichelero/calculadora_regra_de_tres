@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Regra de Três | Maicon Cichelero</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧮 Calculadora de Regra de Três</h1>
+            <p class="subtitle">Por <strong>Maicon Cichelero</strong> | Projeto para portfólio GitHub</p>
+        </header>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="direct">Regra de Três Direta</button>
+            <button class="mode-btn" data-mode="inverse">Regra de Três Inversa</button>
+        </div>
+        
+        <div class="calculator">
+            <div class="input-group">
+                <div class="input-row">
+                    <label>Se</label>
+                    <input type="number" id="valueA" placeholder="Ex: 2" step="any">
+                    <span class="relation">está para</span>
+                    <input type="number" id="valueB" placeholder="Ex: 10" step="any">
+                </div>
+                
+                <div class="input-row">
+                    <label>Então</label>
+                    <input type="number" id="valueC" placeholder="Ex: 5" step="any">
+                    <span class="relation">está para</span>
+                    <input type="number" id="resultX" placeholder="Resultado" readonly>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button id="calculateBtn" class="btn-primary">🔍 Calcular X</button>
+                <button id="clearBtn" class="btn-secondary">🗑️ Limpar</button>
+                <button id="exampleBtn" class="btn-example">💡 Exemplo Prático</button>
+            </div>
+            
+            <div class="explanation">
+                <h3>📝 Resolução Passo a Passo:</h3>
+                <div id="stepByStep">
+                    <p class="placeholder">Preencha os valores acima para ver a resolução...</p>
+                </div>
+            </div>
+            
+            <div class="history">
+                <h3>📊 Histórico (Últimos 5):</h3>
+                <ul id="historyList"></ul>
+                <button id="clearHistoryBtn" class="btn-small">Limpar Histórico</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>📱 <strong>Dica:</strong> Adicione esta página à tela inicial do celular para usar como app!</p>
+            <p class="github-link">
+                <a href="https://github.com/MaiconCichelero/calculadora_regra_de_tres" target="_blank">
+                    ⭐ Ver código fonte no GitHub
+                </a>
+            </p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
